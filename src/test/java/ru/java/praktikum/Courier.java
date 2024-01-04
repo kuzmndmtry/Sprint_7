@@ -3,7 +3,6 @@ package ru.java.praktikum;
 import io.restassured.internal.RequestSpecificationImpl;
 
 public class Courier {
-    public RequestSpecificationImpl create;
     private String login;
     private String password;
     private String firstName;
@@ -17,6 +16,7 @@ public class Courier {
         this.login = login;
         this.password = password;
     }
+
 
     public String getLogin() {
         return login;

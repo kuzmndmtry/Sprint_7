@@ -1,6 +1,8 @@
 package ru.java.praktikum;
 
+import io.qameta.allure.Step;
 import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,8 +12,11 @@ import org.junit.runners.Parameterized;
 import java.io.File;
 
 import static io.restassured.RestAssured.given;
+import static org.apache.http.HttpStatus.SC_CREATED;
+import static org.apache.http.HttpStatus.SC_OK;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.notNullValue;
+import static ru.java.practikum.config.Config.BASE_URI;
 
 @RunWith(Parameterized.class)
 public class PostOrderTest {
@@ -21,7 +26,7 @@ public class PostOrderTest {
         this.body = body;
     }
 
-    @Parameterized.Parameters // добавили аннотацию
+    @Parameterized.Parameters
     public static Object[][] getData() {
         return new Object[][] {
                 {"src/test/resources/OrderWithColorBlack.json"},
@@ -33,23 +38,52 @@ public class PostOrderTest {
 
     @Before
     public void setUp() {
-        RestAssured.baseURI = "https://qa-scooter.praktikum-services.ru";
+        RestAssured.baseURI = BASE_URI;
     }
 
 
     @Test
     public void checkCreateOrder() {
-        File json = new File(body);
         Response response =
-                given()
-                        .header("Content-type", "application/json")
-                        .and()
-                        .body(json)
-                        .when()
-                        .post("/api/v1/orders");
+                sendPostRequestOrders(body);
+        compareResponseStatusCode(response,SC_CREATED);
+        compareResponseBody(response,"track");
         response.then().statusCode(201)
                 .and()
                 .assertThat().body("track", notNullValue());
 
+    }
+
+    @Step("Send POST request to /api/v1/orders")
+    public Response sendPostRequestOrders(String body) {
+        File json = new File(body);
+        Response response =
+                given()
+                        //.log().body()
+                        .body(json)
+                        .contentType(ContentType.JSON)
+                        .post("/api/v1/orders");
+        return response;
+    }
+
+    @Step("Compare status code to something")
+    public void compareResponseStatusCode(Response response, int statusCode) {
+        response
+                .then()
+                .statusCode(statusCode);
+    }
+
+    @Step("Compare body to something")
+    public void compareResponseBody(Response response, String object, String value) {
+        response
+                .then()
+                .body(object, equalTo(value));
+    }
+
+    @Step("Compare body to something")
+    public void compareResponseBody(Response response, String object) {
+        response
+                .then()
+                .body(object, notNullValue());
     }
 }

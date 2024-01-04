@@ -5,7 +5,7 @@ import io.restassured.response.Response;
 import java.io.File;
 
 public class CourierClient extends Client {
-    public Response create(String filePath) {
+    public static Response create(String filePath) {
         File json = new File(filePath);
         return getDefaultRequestSpecification()
                 .body(json)

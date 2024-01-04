@@ -4,29 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62e1155f-e604-4edb-bbd2-d4602715b6ee" name="Changes" comment="change poom">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/java/practikum/client/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/java/practikum/client/CourierClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/java/practikum/config/Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/java/praktikum/Courier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/java/praktikum/CourierId.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/java/praktikum/CreateOrderTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/java/praktikum/DeleteCourierTestClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/java/praktikum/GetOrdersTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/java/praktikum/PostCourierLoginTestClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/java/praktikum/PostCourierTestClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/java/praktikum/PostOrderTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/java/praktikum/PutOrdersAcceptTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/CourierTest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/MockCourier.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/OrderWithAllColor.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/OrderWithColorBlack.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/OrderWithColorGrey.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/OrderWithoutColor.json" afterDir="false" />
+    <list default="true" id="62e1155f-e604-4edb-bbd2-d4602715b6ee" name="Changes" comment="Version 1">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/java/practikum/step/CouriersSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/java/practikum/step/OrdersSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/java/praktikum/DeleteCourierTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/java/praktikum/GetOrdersTrackTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/java/praktikum/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/java/praktikum/OrderData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/java/praktikum/OrderTrack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/java/praktikum/PostCourierTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/CourierDataCreateWithoutLogin.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/CourierDataCreateWithoutPassword.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/CourierDataLoginWithIncorrectPassword.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/java/practikum/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/java/practikum/client/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/java/practikum/client/CourierClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/java/practikum/client/CourierClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/java/praktikum/Courier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/java/praktikum/Courier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/java/praktikum/CreateOrderTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/java/praktikum/DeleteCourierTestClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/java/praktikum/GetOrdersTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/java/praktikum/GetOrdersTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/java/praktikum/PostCourierLoginTestClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/java/praktikum/PostCourierLoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/java/praktikum/PostCourierTestClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/java/praktikum/PostOrderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/java/praktikum/PostOrderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/java/praktikum/PutOrdersAcceptTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/java/praktikum/PutOrdersAcceptTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/CourierTest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/CourierDataCreate.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/MockCourier.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/CourierDataLogin.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,22 +59,49 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.CreateCourierTest.checkCourierCreationWithAFullSetOfFields.executor": "Run",
+    "JUnit.CreateCourierTest.checkCourierCreationWithoutLogin.executor": "Run",
+    "JUnit.CreateCourierTest.checkCourierCreationWithoutPassword.executor": "Run",
+    "JUnit.CreateCourierTest.executor": "Run",
+    "JUnit.DeleteCourierTest.checkCourierDelete.executor": "Run",
     "JUnit.DeleteCourierTest.checkCourierDeleteWithNonExistentLogin.executor": "Run",
     "JUnit.DeleteCourierTest.checkCourierDeleteWithoutLogin.executor": "Run",
     "JUnit.DeleteCourierTest.executor": "Run",
+    "JUnit.DeleteCourierTestClient.checkCourierDelete.executor": "Run",
+    "JUnit.DeleteCourierTestClient.checkCourierDeleteWithNonExistentLogin.executor": "Run",
+    "JUnit.DeleteCourierTestClient.checkCourierDeleteWithoutLogin.executor": "Run",
+    "JUnit.GetOrdersTest.checkGetOrdersListWithoutParams.executor": "Run",
     "JUnit.GetOrdersTest.executor": "Run",
+    "JUnit.GetOrdersTrackTest.checkGetOrderWithIncorrectTrack.executor": "Run",
+    "JUnit.GetOrdersTrackTest.checkGetOrderWithoutTrack.executor": "Run",
+    "JUnit.GetOrdersTrackTest.checkSuccessfulOrderAccept.executor": "Run",
     "JUnit.PostCourierLoginTest.checkCourierLoginWithAFullSetOfFields.executor": "Run",
     "JUnit.PostCourierLoginTest.checkCourierLoginWithIncorrectLogin.executor": "Run",
+    "JUnit.PostCourierLoginTest.checkCourierLoginWithIncorrectPassword.executor": "Run",
     "JUnit.PostCourierLoginTest.checkCourierLoginWithNonExistentLoginPasswordPair.executor": "Run",
+    "JUnit.PostCourierLoginTest.checkCourierLoginWithincorrectLogin.executor": "Run",
     "JUnit.PostCourierLoginTest.checkCourierLoginWithoutLogin.executor": "Run",
+    "JUnit.PostCourierLoginTest.checkCourierLoginWithoutPassword.executor": "Run",
+    "JUnit.PostCourierLoginTest.executor": "Run",
     "JUnit.PostCourierTest.checkCourierCreationWithAFullSetOfFields.executor": "Run",
     "JUnit.PostCourierTest.checkCourierCreationWithoutLogin.executor": "Run",
     "JUnit.PostCourierTest.checkCourierCreationWithoutPassword.executor": "Run",
+    "JUnit.PostCourierTest.checkDuplicateCourierCreation.executor": "Run",
     "JUnit.PostCourierTest.checkUserName.executor": "Run",
     "JUnit.PostCourierTest.deleteTestCourier.executor": "Run",
     "JUnit.PostCourierTest.executor": "Run",
     "JUnit.PostCourierTestClient.checkCourierCreationWithAFullSetOfFields.executor": "Run",
+    "JUnit.PostCourierTestClient.executor": "Run",
     "JUnit.PostOrderTest.executor": "Run",
+    "JUnit.PutOrdersAcceptTest.checkOrderAcceptWithIncorrectCourierId.executor": "Run",
+    "JUnit.PutOrdersAcceptTest.checkOrderAcceptWithIncorrectOrderId.executor": "Run",
+    "JUnit.PutOrdersAcceptTest.checkOrderAcceptWithoutCourierId.executor": "Run",
+    "JUnit.PutOrdersAcceptTest.checkOrderAcceptWithoutOrderId.executor": "Run",
+    "JUnit.PutOrdersAcceptTest.checkRepeatOrderAccept.executor": "Run",
+    "JUnit.PutOrdersAcceptTest.checkSuccessfulOrderAccept.executor": "Run",
+    "JUnit.PutOrdersAcceptTest.executor": "Run",
+    "Maven.Sprint_7 [allure:serve].executor": "Run",
+    "Maven.Sprint_7 [clean,test].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -87,8 +116,14 @@
       <recent name="$PROJECT_DIR$/src/test/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PostCourierTestClient.checkCourierCreationWithAFullSetOfFields">
-    <configuration name="DeleteCourierTestClient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean test" />
+      <command value="mvn allure:serve" />
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.GetOrdersTrackTest.checkGetOrderWithIncorrectTrack">
+    <configuration name="GetOrdersTrackTest.checkGetOrderWithIncorrectTrack" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Sprint_7" />
       <extension name="coverage">
         <pattern>
@@ -97,29 +132,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.java.praktikum" />
-      <option name="MAIN_CLASS_NAME" value="ru.java.praktikum.DeleteCourierTestClient" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DeleteCourierTestClient.checkCourierDeleteWithNonExistentLogin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Sprint_7" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.java.praktikum.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.java.praktikum" />
-      <option name="MAIN_CLASS_NAME" value="ru.java.praktikum.DeleteCourierTestClient" />
-      <option name="METHOD_NAME" value="checkCourierDeleteWithNonExistentLogin" />
+      <option name="MAIN_CLASS_NAME" value="ru.java.praktikum.GetOrdersTrackTest" />
+      <option name="METHOD_NAME" value="checkGetOrderWithIncorrectTrack" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeleteCourierTestClient.checkCourierDeleteWithoutLogin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GetOrdersTrackTest.checkGetOrderWithoutTrack" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Sprint_7" />
       <extension name="coverage">
         <pattern>
@@ -128,14 +148,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.java.praktikum" />
-      <option name="MAIN_CLASS_NAME" value="ru.java.praktikum.DeleteCourierTestClient" />
-      <option name="METHOD_NAME" value="checkCourierDeleteWithoutLogin" />
+      <option name="MAIN_CLASS_NAME" value="ru.java.praktikum.GetOrdersTrackTest" />
+      <option name="METHOD_NAME" value="checkGetOrderWithoutTrack" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetOrdersTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GetOrdersTrackTest.checkSuccessfulOrderAccept" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Sprint_7" />
       <extension name="coverage">
         <pattern>
@@ -144,13 +164,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.java.praktikum" />
-      <option name="MAIN_CLASS_NAME" value="ru.java.praktikum.GetOrdersTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="ru.java.praktikum.GetOrdersTrackTest" />
+      <option name="METHOD_NAME" value="checkSuccessfulOrderAccept" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PostCourierTestClient.checkCourierCreationWithAFullSetOfFields" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PutOrdersAcceptTest.checkOrderAcceptWithIncorrectOrderId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Sprint_7" />
       <extension name="coverage">
         <pattern>
@@ -159,8 +180,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.java.praktikum" />
-      <option name="MAIN_CLASS_NAME" value="ru.java.praktikum.PostCourierTestClient" />
-      <option name="METHOD_NAME" value="checkCourierCreationWithAFullSetOfFields" />
+      <option name="MAIN_CLASS_NAME" value="ru.java.praktikum.PutOrdersAcceptTest" />
+      <option name="METHOD_NAME" value="checkOrderAcceptWithIncorrectOrderId" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PutOrdersAcceptTest.checkRepeatOrderAccept" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sprint_7" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.java.praktikum.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.java.praktikum" />
+      <option name="MAIN_CLASS_NAME" value="ru.java.praktikum.PutOrdersAcceptTest" />
+      <option name="METHOD_NAME" value="checkRepeatOrderAccept" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -168,11 +205,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PostCourierTestClient.checkCourierCreationWithAFullSetOfFields" />
-        <item itemvalue="JUnit.DeleteCourierTestClient.checkCourierDeleteWithoutLogin" />
-        <item itemvalue="JUnit.DeleteCourierTestClient.checkCourierDeleteWithNonExistentLogin" />
-        <item itemvalue="JUnit.DeleteCourierTestClient" />
-        <item itemvalue="JUnit.GetOrdersTest" />
+        <item itemvalue="JUnit.GetOrdersTrackTest.checkGetOrderWithIncorrectTrack" />
+        <item itemvalue="JUnit.GetOrdersTrackTest.checkGetOrderWithoutTrack" />
+        <item itemvalue="JUnit.GetOrdersTrackTest.checkSuccessfulOrderAccept" />
+        <item itemvalue="JUnit.PutOrdersAcceptTest.checkRepeatOrderAccept" />
+        <item itemvalue="JUnit.PutOrdersAcceptTest.checkOrderAcceptWithIncorrectOrderId" />
       </list>
     </recent_temporary>
   </component>
@@ -200,20 +237,42 @@
       <option name="project" value="LOCAL" />
       <updated>1703940102987</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Version 1">
+      <option name="closed" value="true" />
+      <created>1704196452723</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1704196452723</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="change poom" />
-    <option name="LAST_COMMIT_MESSAGE" value="change poom" />
+    <MESSAGE value="Version 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/ru/java/praktikum/DeleteCourierTestClient.java</url>
-          <line>64</line>
-          <option name="timeStamp" value="1" />
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/garbage/PostCourierTest.java</url>
+          <line>46</line>
+          <properties class="ru.java.praktikum.PostCourierTest">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/ru/java/praktikum/DeleteCourierTest.java</url>
+          <line>43</line>
+          <properties class="ru.java.praktikum.DeleteCourierTest">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
