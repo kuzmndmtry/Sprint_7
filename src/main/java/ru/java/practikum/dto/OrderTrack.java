@@ -1,4 +1,4 @@
-package ru.java.praktikum;
+package ru.java.practikum.steps;
 
 public class OrderTrack {
     private String track;

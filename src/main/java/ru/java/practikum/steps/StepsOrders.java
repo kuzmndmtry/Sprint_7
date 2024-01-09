@@ -7,13 +7,19 @@ import ru.java.practikum.client.Client;
 import java.io.File;
 
 public class StepsOrders extends Client {
+    private static final String ORDERS = "/api/v1/orders";
+    //private static final String ORDERS_ACCEPT = "/api/v1/order/accept/";
+    private static final String ORDERS_ACCEPT = "/api/v1/orders/accept/";
+    private static final String ORDERS_TRACK = "/api/v1/orders/track";
+
+
 
 
     @Step("Send GET request to /api/v1/orders")
     public Response sendGetRequestOrders() {
         Response response =
                 getDefaultRequestSpecification()
-                        .get("/api/v1/orders");
+                        .get(ORDERS);
         return response;
     }
 
@@ -23,7 +29,7 @@ public class StepsOrders extends Client {
         Response response =
                 getDefaultRequestSpecification()
                         .body(json)
-                        .post("/api/v1/orders");
+                        .post(ORDERS);
         return response;
     }
 
@@ -32,7 +38,7 @@ public class StepsOrders extends Client {
         Response response =
                 getDefaultRequestSpecification()
                         .queryParam("courierId", courierId)
-                        .put("/api/v1/orders/accept/" + orderId);
+                        .put(ORDERS_ACCEPT + orderId);
         return response;
     }
 
@@ -40,25 +46,25 @@ public class StepsOrders extends Client {
     public Response sendPutAcceptOrder(String orderId) {
         Response response =
                 getDefaultRequestSpecification()
-                        .put("/api/v1/orders/accept/" + orderId);
+                        .put(ORDERS_ACCEPT + orderId);
         return response;
     }
 
-    @Step("Send GET request to /api/v1/orders/track")
-    public static Response getOrderTrack(String track) {
-        Response response =
-                getDefaultRequestSpecification()
-                        .when()
-                        .queryParam("t", track)
-                        .get("/api/v1/orders/track");
-        return response;
-    }
+//    @Step("Send GET request to /api/v1/orders/track")
+//    public static Response getOrderTrack(String track) {
+//        Response response =
+//                getDefaultRequestSpecification()
+//                        .when()
+//                        .queryParam("t", track)
+//                        .get(ORDERS_TRACK);
+//        return response;
+//    }
     @Step("Send POST request to /api/v1/orders/track")
     public Response sendGetOrderTrack(String track) {
         Response response =
                 getDefaultRequestSpecification()
                         .queryParam("t", track)
-                        .get("/api/v1/orders/track");
+                        .get(ORDERS_TRACK);
         return response;
     }
 }

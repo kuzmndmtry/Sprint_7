@@ -6,13 +6,15 @@ import ru.java.practikum.client.Client;
 import java.io.File;
 
 public class StepsCourier extends Client {
+    private static final String COURIER = "/api/v1/courier/";
+    private static final String COURIER_LOGIN = "/api/v1/courier/login";
     @Step("Send POST request to /api/v1/courier")
     public Response sendPostRequestCourier(String jsonPath) {
         File json = new File(jsonPath);
         Response response =
                 getDefaultRequestSpecification()
                         .body(json)
-                        .post("/api/v1/courier");
+                        .post(COURIER);
         return response;
     }
 
@@ -22,7 +24,7 @@ public class StepsCourier extends Client {
         Response response =
                 getDefaultRequestSpecification()
                         .body(json)
-                        .post("/api/v1/courier/login");
+                        .post(COURIER_LOGIN);
         return response;
     }
 
@@ -32,14 +34,14 @@ public class StepsCourier extends Client {
         Response response =
                 getDefaultRequestSpecification()
                         .body(json)
-                        .post("/api/v1/courier/login");
+                        .post(COURIER_LOGIN);
         return response;
     }
     @Step("Send POST request to /api/v1/courier/login")
     public Response sendDeleteRequestCourier(String id) {
         Response response =
                 getDefaultRequestSpecification()
-                        .delete("/api/v1/courier/" + id);
+                        .delete(COURIER + id);
         return response;
     }
 
@@ -47,7 +49,7 @@ public class StepsCourier extends Client {
     public Response sendDeleteRequestCourier() {
         Response response =
                 getDefaultRequestSpecification()
-                        .delete("/api/v1/courier/");
+                        .delete(COURIER);
         return response;
     }
 }
