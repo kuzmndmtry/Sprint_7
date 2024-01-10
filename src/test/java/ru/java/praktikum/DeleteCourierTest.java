@@ -1,63 +1,66 @@
 package ru.java.praktikum;
 
 import io.qameta.allure.junit4.DisplayName;
-import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import ru.java.practikum.client.CourierClient;
+import ru.java.practikum.dto.CourierId;
+import ru.java.practikum.steps.StepsCourier;
+import ru.java.practikum.steps.StepsTest;
 
 import static io.restassured.RestAssured.given;
 import static org.apache.http.HttpStatus.*;
 import static org.hamcrest.Matchers.notNullValue;
-import static ru.java.practikum.config.Config.BASE_URI;
 
 //Удалить курьера
 public class DeleteCourierTest {
+    StepsTest stepsTest = new StepsTest();
+    private CourierClient courierClient;
+    String login = RandomStringUtils.random(10, true, true);
+    String password = RandomStringUtils.random(10, true, true);
+    String nonExistentId = RandomStringUtils.random(2, false, true);
+    String nullId = "";
+    String firstName = RandomStringUtils.random(10,true,false);
+
     @Before
     public void setUp() {
-        RestAssured.baseURI = BASE_URI;
+        courierClient = new CourierClient(new StepsCourier());
     }
-
-    StepsCourier stepsCourier = new StepsCourier();
-    StepsTest stepsTest = new StepsTest();
-
     @Test
     @DisplayName("Сheck successful delete of courier")
     public void checkCourierDelete() {
-        stepsCourier.sendPostRequestCourier("src/test/resources/CourierDataCreate.json");
+        courierClient.create(login, password, firstName);
         CourierId courierId =
-                stepsCourier.sendPostRequestCourierLogin("src/test/resources/CourierDataLogin.json")
+                courierClient.login(login, password)
                         .as(CourierId.class);
         Response response =
-                stepsCourier.sendDeleteRequestCourier(courierId.getId());
+                courierClient.delete(courierId.getId());
         stepsTest.compareResponseStatusCode(response, SC_OK);
     }
     @Test
-    @DisplayName("Сheck delete courier without login")
+    @DisplayName("Сheck delete courier without id")
     public void checkCourierDeleteWithoutLogin() {
         Response response =
-                stepsCourier.sendDeleteRequestCourier();
+                courierClient.delete(nullId);
         stepsTest.compareResponseStatusCode(response, SC_BAD_REQUEST);
         stepsTest.compareResponseBody(response, "message", "Недостаточно данных для удаления курьер");
-
     }
     @Test
-    @DisplayName("Сheck delete courier with non-existent login")
+    @DisplayName("Сheck delete courier with non-existent id")
     public void checkCourierDeleteWithNonExistentLogin() {
         Response response =
-                stepsCourier.sendDeleteRequestCourier("0");
+                courierClient.delete(nonExistentId);
         stepsTest.compareResponseStatusCode(response, SC_NOT_FOUND);
         stepsTest.compareResponseBody(response, "message", "Курьера с таким id нет");
     }
     @After
     public void deleteTestCourier() {
-        //StepsCourier stepsCourier = new StepsCourier();
         CourierId courierId =
-                stepsCourier
-                        .sendPostRequestCourierLogin("src/test/resources/CourierDataCreate.json")
+                courierClient.login(login, password)
                         .as(CourierId.class);
-        stepsCourier
-                .sendDeleteRequestCourier(courierId.getId());
+        courierClient.delete(courierId.getId());
     }
 }

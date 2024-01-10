@@ -1,4 +1,4 @@
-package ru.java.practikum.steps;
+package ru.java.practikum.dto;
 
 public class OrderTrack {
     private String track;

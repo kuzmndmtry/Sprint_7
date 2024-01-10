@@ -1,39 +1,47 @@
 package ru.java.praktikum;
 
 import io.qameta.allure.junit4.DisplayName;
-import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import ru.java.practikum.client.CourierClient;
+import ru.java.practikum.dto.CourierId;
+import ru.java.practikum.dto.OrderData;
+import ru.java.practikum.dto.OrderTrack;
+import ru.java.practikum.steps.*;
 
 import static io.restassured.RestAssured.given;
 import static org.apache.http.HttpStatus.*;
-import static ru.java.practikum.config.Config.BASE_URI;
 
 //Принять заказ
 public class PutOrdersAcceptTest {
-    @Before
-    public void setUp() {
-        RestAssured.baseURI = BASE_URI;
-    }
-    StepsCourier stepsCourier = new StepsCourier();
+    String login = RandomStringUtils.random(10, true, true);
+    String password = RandomStringUtils.random(10, true, true);
+    String firstName = RandomStringUtils.random(10,true,false);
+    String nonExistentId = RandomStringUtils.random(2, false, true);
+    private CourierClient courierClient;
     StepsTest stepsTest = new StepsTest();
     StepsOrders stepsOrders = new StepsOrders();
+    @Before
+    public void setUp() {
+        courierClient = new CourierClient(new StepsCourier());
+    }
 
     @Test
     @DisplayName("Сheck successful order accept")
     public void checkSuccessfulOrderAccept() {
+        courierClient.create(login, password, firstName);
+        CourierId courierId =
+                courierClient.login(login, password)
+                        .as(CourierId.class);
         OrderTrack orderTrack =
                 stepsOrders.sendPostRequestOrders("src/test/resources/OrderWithColorBlack.json")
                         .as(OrderTrack.class);
         OrderData orderData =
-                stepsOrders.getOrderTrack(orderTrack.getTrack())
+                stepsOrders.sendGetOrderTrack(orderTrack.getTrack())
                         .body().as(OrderData.class);
-        stepsCourier.sendPostRequestCourier("src/test/resources/CourierDataCreate.json");
-        CourierId courierId =
-                stepsCourier.sendPostRequestCourierLogin("src/test/resources/CourierDataCreate.json")
-                        .as(CourierId.class);
         Response response =
                 stepsOrders.sendPutAcceptOrder(courierId.getId(), orderData.getOrder().getId());
         stepsTest.compareResponseStatusCode(response, SC_OK);
@@ -46,7 +54,7 @@ public class PutOrdersAcceptTest {
                 stepsOrders.sendPostRequestOrders("src/test/resources/OrderWithColorBlack.json")
                         .as(OrderTrack.class);
         OrderData orderData =
-                stepsOrders.getOrderTrack(orderTrack.getTrack())
+                stepsOrders.sendGetOrderTrack(orderTrack.getTrack())
                         .body().as(OrderData.class);
         Response response =
                 stepsOrders.sendPutAcceptOrder(orderData.getOrder().getId());
@@ -60,19 +68,19 @@ public class PutOrdersAcceptTest {
                 stepsOrders.sendPostRequestOrders("src/test/resources/OrderWithColorBlack.json")
                         .as(OrderTrack.class);
         OrderData orderData =
-                stepsOrders.getOrderTrack(orderTrack.getTrack())
+                stepsOrders.sendGetOrderTrack(orderTrack.getTrack())
                         .body().as(OrderData.class);
         Response response =
-                stepsOrders.sendPutAcceptOrder("0",orderData.getOrder().getId());
+                stepsOrders.sendPutAcceptOrder(nonExistentId,orderData.getOrder().getId());
         stepsTest.compareResponseStatusCode(response, SC_NOT_FOUND);
         stepsTest.compareResponseBody(response, "message", "Курьера с таким id не существует");
     }
     @Test
     @DisplayName("Сheck order accept without order id")
     public void checkOrderAcceptWithoutOrderId() {
-        stepsCourier.sendPostRequestCourier("src/test/resources/CourierDataCreate.json");
+        courierClient.create(login, password, firstName);
         CourierId courierId =
-                stepsCourier.sendPostRequestCourierLogin("src/test/resources/CourierDataCreate.json")
+                courierClient.login(login, password)
                         .as(CourierId.class);
         Response response =
                 stepsOrders.sendPutAcceptOrder(courierId.getId(), "");
@@ -82,9 +90,9 @@ public class PutOrdersAcceptTest {
     @Test
     @DisplayName("Сheck order accept with incorrect order id")
     public void checkOrderAcceptWithIncorrectOrderId() {
-        stepsCourier.sendPostRequestCourier("src/test/resources/CourierDataCreate.json");
+        courierClient.create(login, password, firstName);
         CourierId courierId =
-                stepsCourier.sendPostRequestCourierLogin("src/test/resources/CourierDataCreate.json")
+                courierClient.login(login, password)
                         .as(CourierId.class);
         Response response =
                 stepsOrders.sendPutAcceptOrder(courierId.getId(), "0000");
@@ -98,11 +106,11 @@ public class PutOrdersAcceptTest {
                 stepsOrders.sendPostRequestOrders("src/test/resources/OrderWithColorBlack.json")
                         .as(OrderTrack.class);
         OrderData orderData =
-                stepsOrders.getOrderTrack(orderTrack.getTrack())
+                stepsOrders.sendGetOrderTrack(orderTrack.getTrack())
                         .body().as(OrderData.class);
-        stepsCourier.sendPostRequestCourier("src/test/resources/CourierDataCreate.json");
+        courierClient.create(login, password, firstName);
         CourierId courierId =
-                stepsCourier.sendPostRequestCourierLogin("src/test/resources/CourierDataCreate.json")
+                courierClient.login(login, password)
                         .as(CourierId.class);
         stepsOrders.sendPutAcceptOrder(courierId.getId(), orderData.getOrder().getId());
         Response response =
@@ -112,12 +120,9 @@ public class PutOrdersAcceptTest {
     }
     @After
     public void deleteTestCourier() {
-        //StepsCourier stepsCourier = new StepsCourier();
         CourierId courierId =
-                stepsCourier
-                        .sendPostRequestCourierLogin("src/test/resources/CourierDataCreate.json")
+                courierClient.login(login, password)
                         .as(CourierId.class);
-        stepsCourier
-                .sendDeleteRequestCourier(courierId.getId());
+        courierClient.delete(courierId.getId());
     }
 }

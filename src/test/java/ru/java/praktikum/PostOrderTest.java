@@ -1,16 +1,15 @@
 package ru.java.praktikum;
 
-import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+import ru.java.practikum.steps.StepsOrders;
+import ru.java.practikum.steps.StepsTest;
 
 import static io.restassured.RestAssured.given;
 import static org.apache.http.HttpStatus.SC_CREATED;
 import static org.hamcrest.Matchers.notNullValue;
-import static ru.java.practikum.config.Config.BASE_URI;
 
 @RunWith(Parameterized.class)
 public class PostOrderTest {
@@ -28,11 +27,6 @@ public class PostOrderTest {
                 {"src/test/resources/OrderWithAllColor.json"},
                 {"src/test/resources/OrderWithoutColor.json"},
         };
-    }
-
-    @Before
-    public void setUp() {
-        RestAssured.baseURI = BASE_URI;
     }
     StepsTest stepsTest = new StepsTest();
     StepsOrders stepsOrders = new StepsOrders();

@@ -1,55 +1,35 @@
-package ru.java.praktikum;
+package ru.java.practikum.steps;
 
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
-import ru.java.practikum.client.Client;
-import java.io.File;
+import ru.java.practikum.client.RestClient;
+import ru.java.practikum.dto.Courier;
+import ru.java.practikum.dto.CourierLogin;
 
-public class StepsCourier extends Client {
+public class StepsCourier extends RestClient {
     private static final String COURIER = "/api/v1/courier/";
     private static final String COURIER_LOGIN = "/api/v1/courier/login";
     @Step("Send POST request to /api/v1/courier")
-    public Response sendPostRequestCourier(String jsonPath) {
-        File json = new File(jsonPath);
+    public Response sendPostRequestCourier(Courier courier) {
         Response response =
                 getDefaultRequestSpecification()
-                        .body(json)
+                        .body(courier)
                         .post(COURIER);
         return response;
     }
-
     @Step("Send POST request to /api/v1/courier/login")
-    public Response sendPostRequestCourierLogin(String jsonPath) {
-        File json = new File(jsonPath);
+    public Response sendPostRequestCourierLogin(CourierLogin courierLogin) {
         Response response =
                 getDefaultRequestSpecification()
-                        .body(json)
-                        .post(COURIER_LOGIN);
-        return response;
-    }
-
-    @Step("Send POST request to /api/v1/courier/login")
-    public Response sendPostRequestCourierLogin(String login, String Password) {
-        Courier json = new Courier(login, Password);
-        Response response =
-                getDefaultRequestSpecification()
-                        .body(json)
+                        .body(courierLogin)
                         .post(COURIER_LOGIN);
         return response;
     }
     @Step("Send POST request to /api/v1/courier/login")
-    public Response sendDeleteRequestCourier(String id) {
+    public Response sendDeleteRequestCourier(String courierId) {
         Response response =
                 getDefaultRequestSpecification()
-                        .delete(COURIER + id);
-        return response;
-    }
-
-    @Step("Send POST request to /api/v1/courier/login")
-    public Response sendDeleteRequestCourier() {
-        Response response =
-                getDefaultRequestSpecification()
-                        .delete(COURIER);
+                        .delete(COURIER + courierId);
         return response;
     }
 }

@@ -1,21 +1,18 @@
 package ru.java.praktikum;
 
 import io.qameta.allure.junit4.DisplayName;
-import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import org.junit.Before;
 import org.junit.Test;
+import ru.java.practikum.dto.OrderTrack;
+import ru.java.practikum.steps.StepsOrders;
+import ru.java.practikum.steps.StepsTest;
 
 import static io.restassured.RestAssured.given;
 import static org.apache.http.HttpStatus.*;
 import static org.hamcrest.Matchers.notNullValue;
-import static ru.java.practikum.config.Config.BASE_URI;
 
 public class GetOrdersTrackTest {
-    @Before
-    public void setUp() {
-        RestAssured.baseURI = BASE_URI;
-    }
+
     StepsTest stepsTest = new StepsTest();
     StepsOrders stepsOrders = new StepsOrders();
 
