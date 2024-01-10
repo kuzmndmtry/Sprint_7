@@ -4,16 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62e1155f-e604-4edb-bbd2-d4602715b6ee" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="62e1155f-e604-4edb-bbd2-d4602715b6ee" name="Changes" comment="Version 3">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -21,23 +25,181 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2aGJTkVwlyZ5XCdro5AhmDyVT7U" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.CreateCourierTest.checkCourierCreationWithAFullSetOfFields.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CreateCourierTest.checkCourierCreationWithoutLogin.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CreateCourierTest.checkCourierCreationWithoutPassword.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CreateCourierTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DeleteCourierTest.checkCourierDelete.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DeleteCourierTest.checkCourierDeleteWithNonExistentLogin.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DeleteCourierTest.checkCourierDeleteWithoutLogin.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DeleteCourierTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DeleteCourierTestClient.checkCourierDelete.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DeleteCourierTestClient.checkCourierDeleteWithNonExistentLogin.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DeleteCourierTestClient.checkCourierDeleteWithoutLogin.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GetOrdersTest.checkGetOrdersListWithoutParams.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GetOrdersTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GetOrdersTrackTest.checkGetOrderWithIncorrectTrack.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GetOrdersTrackTest.checkGetOrderWithoutTrack.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GetOrdersTrackTest.checkSuccessfulOrderAccept.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GetOrdersTrackTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PostCourierLoginTest.checkCourierLoginWithAFullSetOfFields.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PostCourierLoginTest.checkCourierLoginWithIncorrectLogin.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PostCourierLoginTest.checkCourierLoginWithIncorrectPassword.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PostCourierLoginTest.checkCourierLoginWithNonExistentLoginPasswordPair.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PostCourierLoginTest.checkCourierLoginWithincorrectLogin.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PostCourierLoginTest.checkCourierLoginWithoutLogin.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PostCourierLoginTest.checkCourierLoginWithoutPassword.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PostCourierLoginTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PostCourierTest.checkCourierCreationWithAFullSetOfFields.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PostCourierTest.checkCourierCreationWithoutLogin.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PostCourierTest.checkCourierCreationWithoutPassword.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PostCourierTest.checkDuplicateCourierCreation.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PostCourierTest.checkUserName.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PostCourierTest.deleteTestCourier.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PostCourierTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PostCourierTestClient.checkCourierCreationWithAFullSetOfFields.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PostCourierTestClient.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PostOrderTest.checkCreateOrder.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PostOrderTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PutOrdersAcceptTest.checkOrderAcceptWithIncorrectCourierId.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PutOrdersAcceptTest.checkOrderAcceptWithIncorrectOrderId.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PutOrdersAcceptTest.checkOrderAcceptWithoutCourierId.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PutOrdersAcceptTest.checkOrderAcceptWithoutOrderId.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PutOrdersAcceptTest.checkRepeatOrderAccept.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PutOrdersAcceptTest.checkSuccessfulOrderAccept.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PutOrdersAcceptTest.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Sprint_7 [allure:serve].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Sprint_7 [clean,test].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/kuzmndmtry/qa/qa_automation/projectPraktikum/Sprint_7/src/test/resources&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;module&quot;,
+      &quot;repository&quot;
+    ]
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.java.practikum.dto" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean test" />
+      <command value="mvn allure:serve" />
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.PutOrdersAcceptTest">
+    <configuration name="PostCourierTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sprint_7" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.java.praktikum.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.java.praktikum" />
+      <option name="MAIN_CLASS_NAME" value="ru.java.praktikum.PostCourierTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PutOrdersAcceptTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sprint_7" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.java.praktikum.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.java.praktikum" />
+      <option name="MAIN_CLASS_NAME" value="ru.java.praktikum.PutOrdersAcceptTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PutOrdersAcceptTest.checkOrderAcceptWithoutCourierId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sprint_7" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.java.praktikum.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.java.praktikum" />
+      <option name="MAIN_CLASS_NAME" value="ru.java.praktikum.PutOrdersAcceptTest" />
+      <option name="METHOD_NAME" value="checkOrderAcceptWithoutCourierId" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PutOrdersAcceptTest.checkRepeatOrderAccept" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sprint_7" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.java.praktikum.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.java.praktikum" />
+      <option name="MAIN_CLASS_NAME" value="ru.java.praktikum.PutOrdersAcceptTest" />
+      <option name="METHOD_NAME" value="checkRepeatOrderAccept" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PutOrdersAcceptTest.checkSuccessfulOrderAccept" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sprint_7" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.java.praktikum.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.java.praktikum" />
+      <option name="MAIN_CLASS_NAME" value="ru.java.praktikum.PutOrdersAcceptTest" />
+      <option name="METHOD_NAME" value="checkSuccessfulOrderAccept" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.PutOrdersAcceptTest" />
+        <item itemvalue="JUnit.PutOrdersAcceptTest.checkRepeatOrderAccept" />
+        <item itemvalue="JUnit.PutOrdersAcceptTest.checkOrderAcceptWithoutCourierId" />
+        <item itemvalue="JUnit.PutOrdersAcceptTest.checkSuccessfulOrderAccept" />
+        <item itemvalue="JUnit.PostCourierTest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -54,6 +216,94 @@
       <option name="presentableId" value="Default" />
       <updated>1703938991530</updated>
     </task>
+    <task id="LOCAL-00001" summary="change poom">
+      <option name="closed" value="true" />
+      <created>1703940102987</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1703940102987</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Version 1">
+      <option name="closed" value="true" />
+      <created>1704196452723</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1704196452723</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Version 2">
+      <option name="closed" value="true" />
+      <created>1704365624506</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1704365624506</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Version 3">
+      <option name="closed" value="true" />
+      <created>1704402367998</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1704402367998</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Убран base uri в req spec&#10;Добавлены объекты для создания курьера&#10;Добавлены распределения по пакетам в main">
+      <option name="closed" value="true" />
+      <created>1704830643939</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1704830643939</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="change poom" />
+    <MESSAGE value="Version 1" />
+    <MESSAGE value="Version 2" />
+    <MESSAGE value="Version 3" />
+    <MESSAGE value="Убран base uri в req spec&#10;Добавлены объекты для создания курьера&#10;Добавлены распределения по пакетам в main" />
+    <option name="LAST_COMMIT_MESSAGE" value="Убран base uri в req spec&#10;Добавлены объекты для создания курьера&#10;Добавлены распределения по пакетам в main" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/garbage/PostCourierTest.java</url>
+          <line>46</line>
+          <properties class="ru.java.praktikum.PostCourierTest">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/ru/java/praktikum/DeleteCourierTest.java</url>
+          <line>43</line>
+          <properties class="ru.java.praktikum.DeleteCourierTest" method="checkCourierDeleteWithoutLogin">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="6" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
